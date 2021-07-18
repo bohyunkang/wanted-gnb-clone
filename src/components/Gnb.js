@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
-import { MenuItems } from "./MenuItems";
+import NavList from "./NavList";
+import MenuBar from "./MenuBar";
 
 import logo from "../assets/img-logo.png";
 import profile from "../assets/img-profile.png";
@@ -9,6 +10,12 @@ import search from "../assets/icon-search.svg";
 import notification from "../assets/icon-notification.svg";
 
 const Gnb = () => {
+	const [menuBar, setMenuBar] = useState(false);
+	const showMenu = (e) => {
+		e.preventDefault();
+		setMenuBar((menuBar) => !menuBar);
+	};
+
 	return (
 		<Wrapper>
 			<div className="gnb-wrapper">
@@ -22,15 +29,10 @@ const Gnb = () => {
 
 				<nav className="gnb-nav">
 					<h2 className="visually-hidden">메뉴</h2>
-					<ul className="gnb-nav-list">
-						{MenuItems.map((item, index) => (
-							<li key={index}>
-								<a href={item.url} className={item.cName}>
-									{item.title}
-								</a>
-							</li>
-						))}
-					</ul>
+					<NavList onMouseEnter={showMenu} />
+					<div className={menuBar ? "open-menu" : "close-menu"}>
+						<MenuBar />
+					</div>
 				</nav>
 
 				<ul className="gnb-right">
@@ -97,21 +99,14 @@ const Wrapper = styled.div`
 			clip-path: polygon(0 0, 0 0, 0 0);
 		}
 
-		.gnb-nav-list {
-			height: 50px;
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			.gnb-nav-item {
-				padding: 14px;
-				font-weight: 600;
-			}
-			.gnb-nav-item:hover {
-				border-bottom: 2px solid #e1e2e3;
-			}
-			.gnb-nav-item:active {
-				border-bottom: 2px solid #3366ff;
-			}
+		.open-menu {
+			position: absolute;
+			width: 100%;
+			left: 0;
+			transition: 0.1s ease-in;
+		}
+		.close-menu {
+			display: none;
 		}
 	}
 
@@ -163,7 +158,7 @@ const Wrapper = styled.div`
 			}
 		}
 		.division {
-			margin-left: 0;
+			margin: auto 0;
 		}
 	}
 `;
