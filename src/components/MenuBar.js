@@ -201,7 +201,6 @@ const MenuBar = () => {
 };
 
 const Wrapper = styled.div`
-	border: 1px solid red;
 	padding: 15px;
 	max-width: 1060px;
 	margin: 0 auto;
@@ -220,7 +219,7 @@ const Wrapper = styled.div`
 	}
 	.job-category h2 {
 		font-size: 20px;
-		margin-right: 30px;
+		margin: 0 20px 20px 0;
 	}
 	.job-category h3 {
 		color: #999;
@@ -233,7 +232,6 @@ const Wrapper = styled.div`
 		color: black;
 	}
 	.etc-wrapper {
-		border: 1px solid green;
 		.job-category + .job-category {
 			margin-top: 10px;
 		}

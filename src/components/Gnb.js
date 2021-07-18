@@ -103,7 +103,7 @@ const Wrapper = styled.div`
 			position: absolute;
 			width: 100%;
 			left: 0;
-			transition: 0.1s ease-in;
+			margin-top: 20px;
 		}
 		.close-menu {
 			display: none;
