@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import Main from "./pages/Main";
+import styled from "styled-components";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<Wrapper>
+			<Main />
+		</Wrapper>
+	);
 }
+
+const Wrapper = styled.div`
+	/* button 태그 기본값 초기화 */
+	button {
+		background: inherit;
+		border: none;
+		box-shadow: none;
+		border-radius: 0;
+		padding: 0;
+		overflow: visible;
+		cursor: pointer;
+	}
+	/* a 태그 기본값 초기화 */
+	a {
+		text-decoration: none;
+		color: black;
+	}
+`;
 
 export default App;
