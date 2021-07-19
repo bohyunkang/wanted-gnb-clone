@@ -1,7 +1,7 @@
 import React from "react";
 import Gnb from "../components/Gnb";
 
-const Main = () => {
+const Home = () => {
 	return (
 		<div>
 			<Gnb />
@@ -9,4 +9,4 @@ const Main = () => {
 	);
 };
 
-export default Main;
+export default Home;

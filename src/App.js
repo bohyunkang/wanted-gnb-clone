@@ -1,10 +1,10 @@
-import Main from "./pages/Main";
+import Home from "./pages/Home";
 import styled from "styled-components";
 
 function App() {
 	return (
 		<Wrapper>
-			<Main />
+			<Home />
 		</Wrapper>
 	);
 }
