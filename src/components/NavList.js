@@ -6,6 +6,7 @@ const NavList = ({ onMouseEnter }) => {
 		<Wrapper>
 			<ul className="gnb-nav-list">
 				<li className="mobile-only">
+					<h1 className="visually-hidden">원티드</h1>
 					<a href="/" className="gnb-nav-item">
 						홈
 					</a>
