@@ -5,10 +5,10 @@ import NavList from "./NavList";
 import MenuBar from "./MenuBar";
 import HamburgerBtn from "./HamburgerBtn";
 
-import logo from "../assets/img-logo.png";
-import profile from "../assets/img-profile.png";
-import search from "../assets/icon-search.svg";
-import notification from "../assets/icon-notification.svg";
+import logo from "../../assets/img-logo.png";
+import profile from "../../assets/img-profile.png";
+import search from "../../assets/icon-search.svg";
+import notification from "../../assets/icon-notification.svg";
 
 const Gnb = () => {
 	const [menuBar, setMenuBar] = useState(false);

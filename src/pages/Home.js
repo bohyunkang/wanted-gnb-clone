@@ -1,5 +1,5 @@
 import React from "react";
-import Gnb from "../components/Gnb";
+import Gnb from "../components/Gnb/Gnb";
 
 const Home = () => {
 	return (

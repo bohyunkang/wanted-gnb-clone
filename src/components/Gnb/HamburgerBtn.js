@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import hamburgerBtn from "../assets/icon-hamburgerBtn.svg";
+import hamburgerBtn from "../../assets/icon-hamburgerBtn.svg";
 
 const HamburgerBtn = () => {
 	return (
