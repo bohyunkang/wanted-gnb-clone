@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import NavList from "./NavList";
 import MenuBar from "./MenuBar";
+import HamburgerBtn from "./HamburgerBtn";
 
 import logo from "../assets/img-logo.png";
 import profile from "../assets/img-profile.png";
@@ -46,6 +47,7 @@ const Gnb = () => {
 							<img src={notification} alt="알림 보기 버튼" className="icon" />
 						</button>
 					</li>
+					<HamburgerBtn />
 					<li className="gnb-right-item">
 						<button type="button">
 							<div className="profile-wrapper">
@@ -85,6 +87,9 @@ const Wrapper = styled.div`
 	}
 
 	.gnb-left {
+		@media screen and (max-width: 768px) {
+			display: none;
+		}
 		.logo img {
 			width: 75px;
 		}
@@ -104,6 +109,9 @@ const Wrapper = styled.div`
 			width: 100%;
 			left: 0;
 			margin-top: 20px;
+			@media screen and (max-width: 768px) {
+				display: none;
+			}
 		}
 		.close-menu {
 			display: none;
@@ -115,6 +123,12 @@ const Wrapper = styled.div`
 		justify-content: space-between;
 		align-items: center;
 
+		.profile-wrapper {
+			@media screen and (max-width: 768px) {
+				display: none;
+			}
+		}
+
 		.division::before {
 			display: block;
 			content: "";
@@ -122,6 +136,10 @@ const Wrapper = styled.div`
 			height: 10px;
 			background-color: #e1e2e3;
 			margin: auto 10px;
+
+			@media screen and (max-width: 768px) {
+				display: none;
+			}
 		}
 		.corp-service {
 			margin-left: 10px;
@@ -133,6 +151,10 @@ const Wrapper = styled.div`
 			padding: 0 10px;
 			font-size: 14px;
 			font-weight: 400;
+
+			@media screen and (max-width: 768px) {
+				display: none;
+			}
 		}
 
 		.gnb-right-item {
